@@ -42,8 +42,8 @@
     <div id="banner" class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="jumbotron" >
-                    <h1 class="small" >Welcome To <span class="bold">Night Canteen</span></h1>
+                <div class="jumbotron">
+                    <h1 class="small">Welcome To <span class="bold">Night Canteen</span></h1>
                     <p class="big">An All Night Facility for Every Engineer.</p>
                     <!-- <a href="#" class="btn btn-banner">
                         Accepted modes of payment :- 
@@ -80,9 +80,17 @@
                 {% for obj in object_list %}
                 <div class="col-lg-3 col-md-4 col-sm-6 product-item filter-{{obj.i_type}}">
                     <img src="{{obj.image.url}}" alt="{{obj.title}}">
+                    <p style="position:absolute;
+                            top:8px;right:20px; 
+                            background-color: #e43c5c; 
+                            color: #fff; 
+                            border-color: #E74C3C; 
+                            display: inline-block;">
+                        Rs {{obj.price}}
+                    </p>
                     <div class="details">
                         <h4>{{obj.title}}</h4>
-                        <span>Price : {{obj.price}}</span>
+                        <!-- <span>Price : {{obj.price}}</span> -->
                         <span>Quantity : {{obj.quantity}}</span>
                     </div>
                 </div>
