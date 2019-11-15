@@ -23,3 +23,7 @@ def main(request):
     }
 
     return render(request,'index.html',context)
+
+def closed(request):
+    some = {}
+    return render(request,"closed.html",some)
